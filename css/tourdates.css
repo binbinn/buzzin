@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+section {
+    margin: 100px;
+    line-height: 2em;
+}
+
+/* nav bar */
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    background: #fff;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 24px 30px;
+}
+
+nav li a {
+    color: #191919;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: .2em;
+    line-height: 2.3em;
+}
+
+li::before {
+    content: '';
+    background: url(../img/bee.jpg);
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    float: left;
+  }
+
+/* dates */
+
+section {
+    margin-top: 230px;
+}
+
+.city {
+    display: block;
+}
+
+.name ,
+.date {
+    display: inline-block;
+}
+
+p {
+    margin-right: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #F5F1EF;
+    border: 0;
+}
+
+.la .date {
+    margin: 0 33px 0 30px;
+}
+
+.ny .date {
+    margin: 0 33px 0 41px;
+}
+
+.carolina .date {
+    margin: 0 33px 0 50px;
+}
+
+.indiana .date {
+    margin: 0 33px 0 52px;
+}
+
+.rome .date {
+    margin: 0 33px 0 66px;
+}
+
+.paris .date {
+    margin: 0 33px 0 70px;
+}
