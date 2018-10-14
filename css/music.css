@@ -1,80 +1,213 @@
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-}
-
-section {
-    margin: 100px;
-    line-height: 2em;
-}
-
-/* nav bar */
-
-a {
-    text-decoration: none;
-}
-
-nav {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 65px;
-    background: #fff;
-    position: fixed;
-    z-index: 1;
-    text-align: center;
-    font-family: 'Tajawal', sans-serif;
-}
-
-nav ul {
     padding: 0;
-    margin: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: url(/Users/binbin/Documents/buzzin/img/skybg8.jpg) no-repeat 5%;
+    background-size: cover;
 }
+@media (min-width: 320px) {
+    header {
+        height: 10vh;
+    }
 
-nav li {
-    display: inline-block;
-    padding: 24px 30px;
+    /* navigation bar */
+    nav {
+        font-family: 'Tajawal', sans-serif;
+        letter-spacing: .2em;
+        position: fixed;
+        width: 100%;
+        line-height: 60px;
+        z-index: 1;
+    }
+    .logo {
+        float: left;
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        top: 35px;
+        left: 40px;
+    }
+    img {
+        width: 55px;
+        height: 55px;
+    }
+
+    nav ul {
+        line-height: 60px;
+        list-style: none;
+        background: rgba(0, 0, 0, 0);
+        overflow: hidden;
+        color: #fff;
+        padding-top: 6%;
+        text-align: right;
+        margin: 0;
+        padding-right: 20px;
+        transition: 1s;
+    }
+
+    nav.black ul {
+        background: rgba(0, 0, 0, 0.664);
+    }
+
+    .showing {
+        max-height: 100%;
+    }
+    
+    nav ul li {
+        display: block;
+        padding: 0.8em 50px;
+    }
+    nav ul {
+        padding-top: 12%;
+        max-height: 0;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+    
+    .nav-icon {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        right: 0;
+        display: block;
+    }
+    
+    .hamburger {
+        width: 70px;
+        height: 6px;
+        position: absolute;
+        transition: .5s;
+        top: 70%;
+        right: 50%;
+        display: block;
+    }
+    
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        height: 6px;
+        background: #fff;
+        transition: .5s;
+        width: 40px;
+    }
+    
+    .hamburger::before {
+        top: -8px;
+    }
+    
+    .hamburger::after {
+        top: 8px;
+    }
+    
+    .nav-icon.active .hamburger {
+        background: rgba(0, 0, 0, 0);
+    }
+    
+    .nav-icon.active .hamburger::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    
+    .nav-icon.active .hamburger::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    /* astronaut section*/
+    .pic {
+        width: 100%;
+        height: 900px;
+        margin-top: 100px;
+    }
+    .astro {
+        width: 80%;
+        height: auto;
+        margin-left: 100px;
+        position: absolute;
+    }
+    #record {
+        width: 370px;
+        height: auto;
+        margin-left: 323px;
+        margin-top: 208px;
+    }
+    /* music section*/
+    h6 {
+        font-size: 2em;
+    }
+    
+    #player {
+        padding: 10px;        
+    }
+    #songTitle {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 50px;
+    }
+    button {
+        margin-left: 130px;
+        margin-right: 50px;
+        float: left;
+        background: url(/Users/binbin/Documents/buzzin/img/icons_play.png);
+        height: 80px;
+        width: 80px;
+        border: none;
+    }
+    
+    #currentTime,
+    #leftTime {
+        float: left;
+        margin-top: 25px;
+        font-size: 1.5em;
+    }
+    
+    #leftTime {
+        margin-left: 395px;
+    }
+    #seekBar {
+        width: 520px;
+        height: 6px;
+        background-color: #fff;
+        display: flex;
+        float: left;
+        margin-top: 20px;
+        margin-right: 120px;
+    }
+    #fill {
+        height: 6px;
+        background-color: royalblue;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0;
+        grid-auto-rows: minmax(100px, auto);
+        margin: 50px 0 50px 290px;
+        width: 690px;
+      }
+    .name {
+        grid-column: 1;
+        width: 370px;
+    }
+    .time {
+        grid-column: 2;
+    }
+    .time h6 {
+        font-size: 1em;
+    }
 }
+@media (min-width: 768px) {
 
-nav li a {
-    color: #191919;
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: .2em;
-    line-height: 2.3em;
 }
+@media (min-width: 1224px) {
 
-li::before {
-    content: '';
-    background: url(../img/bee.jpg);
-    background-size: 100%;
-    width: 30px;
-    height: 30px;
-    float: left;
 }
+@media (min-width: 1824px) {
 
-/* cover art */
-
-img {
-    width: 250px;
-    height: 250px;
-    margin: 100px;
-}
-
-/* songs */
-
-#titleSong {
-    display: inline-block;
-    margin: 0 200px 10px 200px;
-}
-
-p {
-    float: left;
-    font-size: 16px;
-    margin-right: 50px;
-}
-
-audio {
-    float: right;
 }

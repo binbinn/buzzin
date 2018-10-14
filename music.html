@@ -1,56 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/music.css">
-    <link href="https://fonts.googleapis.com/css?family=Palanquin|Poppins|Tajawal" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/music.js"></script>
-    <title>Buzzin</title>
-</head>
-<body>
-    <div>
-        <nav>
-            <ul>
-                <li><a href="main.html">home</a></li>
-                <li><a href="music.html">music</a></li>
-                <li><a href="tourdates.html">tour</a></li>
-                <li><a href="merchandise.html">merch</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-    </div>
-    <section>
-        <div class="coverart">
-            <img src="/Users/binbin/Documents/buzzin/img/coverart.png">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/music.css">
+        <link href="https://fonts.googleapis.com/css?family=Palanquin|Poppins|Tajawal" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/music.js"></script>
+        <title>Buzzin</title>
+    </head>
+    <body>
+        <div>
+            <header>
+                <nav> 
+                     
+                    <div class="logo">
+                        <a href="main.html"><img src="/Users/binbin/Documents/buzzin/img/beee.gif"></a>
+                    </div>
+                    <div class="nav">
+                        <div class="nav-icon"><div class="hamburger"></div></div>
+                        <ul>
+                            <li class="li"><a href="main.html">home</a></li>
+                            <li class="li"><a href="music.html">music</a></li>
+                            <li class="li"><a href="tourdates.html">tour</a></li>
+                            <li class="li"><a href="merchandise.html">merch</a></li>
+                            <li class="li"><a href="about.html">about</a></li>
+                            <li class="li"><a href="contact.html">contact</a></li>
+                        </ul>
+                    </div>  
+                </nav>
+            </header>
+            <section class="pic">
+                <div>
+                    <img class="astro" src="/Users/binbin/Documents/buzzin/img/astronaut.gif">
+                    <img id="record" src="/Users/binbin/Documents/buzzin/img/recordfill.gif">
+                </div>
+            </section>
+            <section class="music" >
+                <div id="player">
+                    <div id="songTitle">Demo</div>
+                    <div id="button">
+                        <button id="play" onclick="function()"></button>
+                    </div>
+                    <div id="seekBar">
+                        <div id="fill"></div>
+                    </div>
+                    <div id="currentTime">00:00</div>
+                    <div id="leftTime">00:00</div>
+                </div>
+                <div class="list wrapper">
+                    <div class="name">
+                        <h6>Hood violation</h6>
+                        <h6>Know ( ft.ajna)</h6>
+                        <h6>JohnQ ( ft.lil sleep, passion)</h6>
+                        <h6>Too hard</h6>
+                        <h6>Bust down</h6>
+                        <h6>Birthday cover</h6>
+                    </div>
+                    <div class="time">
+                        <h6>2:55</h6>
+                        <h6>3:26</h6>
+                        <h6>2:58</h6>
+                        <h6>2:39</h6>
+                        <h6>3:02</h6>
+                        <h6>1:57</h6>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="songs">
-            <div id="titleSong">
-                <p>Hood violation</p>
-                <audio controls src="/Users/binbin/Documents/buzzin/songs/01jeffr33-Hood violation.mp3"></audio>
-            </div>
-            <div id="titleSong">
-                <p>Know(ft.ajna)</p>
-                <audio controls src="/Users/binbin/Documents/buzzin/songs/02jeffr33-Know(ft.ajna).mp3"></audio>
-            </div>
-            <div id="titleSong">
-                <p>JohnQ(ft.lil sleep, passion)</p>
-                <audio controls src="/Users/binbin/Documents/buzzin/songs/03jeffr33-JohnQ(ft.lil sleep, passion).mp3"></audio>
-            </div>
-            <div id="titleSong">
-                <p>Too hard</p>
-                <audio controls src="/Users/binbin/Documents/buzzin/songs/04jeffr33-Too hard.mp3"></audio>
-            </div>
-            <div id="titleSong">
-                <p>Bust down</p>
-                <audio controls src="/Users/binbin/Documents/buzzin/songs/05jeffr33-Bust down.mp3"></audio>
-            </div>
-            <div id="titleSong">
-                <p>Birthday cover</p>
-                <audio controls src="/Users/binbin/Documents/buzzin/songs/06jeffr33-Birthday cover.mp3"></audio>
-            </div>
-        </div>
-    </section>
-</body>
+    </body>
 </html>
