@@ -5,170 +5,126 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 320px) {
-    header {
-        height: 25vh;
-        background: url(/Users/binbin/Documents/buzzin/img/Ticket-Booth.jpg);
-    }
-    footer {
-        height: 15vh;
-        background: url(/Users/binbin/Documents/buzzin/img/Ticket-Booth.jpg)  50% 100%;
-    }
-
-    /* navigation bar */
-    nav {
-        font-family: 'Tajawal', sans-serif;
-        letter-spacing: .2em;
-        position: fixed;
-        width: 100%;
-        line-height: 60px;
-    }
-    .logo {
-        float: left;
-        position: fixed;
-        width: 100px;
-        height: 100px;
-        top: 35px;
-        left: 40px;
-    }
-    img {
-        width: 55px;
-        height: 55px;
-    }
-
-    
-    nav ul {
-        line-height: 60px;
-        list-style: none;
-        background: rgba(0, 0, 0, 0);
-        overflow: hidden;
-        color: #fff;
-        padding-top: 6%;
-        text-align: right;
-        margin: 0;
-        padding-right: 20px;
-        transition: 1s;
-    }
-
-    nav.black ul {
-        background: rgba(0, 0, 0, 0.664);
-    }
-
-    .showing {
-        max-height: 100%;
-    }
-    
-    nav ul li {
-        display: block;
-        padding: 0.8em 50px;
-    }
-    nav ul {
-        padding-top: 12%;
-        max-height: 0;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1em;
-    }
-    
-    .nav-icon {
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        right: 0;
-        display: block;
-    }
-    
-    .hamburger {
-        width: 70px;
-        height: 6px;
-        position: absolute;
-        transition: .5s;
-        top: 70%;
-        right: 50%;
-        display: block;
-    }
-    
-    .hamburger::before,
-    .hamburger::after {
-        content: '';
-        position: absolute;
-        height: 6px;
-        background: #fff;
-        transition: .5s;
-        width: 40px;
-    }
-    
-    .hamburger::before {
-        top: -8px;
-    }
-    
-    .hamburger::after {
-        top: 8px;
-    }
-    
-    .nav-icon.active .hamburger {
-        background: rgba(0, 0, 0, 0);
-    }
-    
-    .nav-icon.active .hamburger::before {
-        top: 0;
-        transform: rotate(45deg);
-    }
-    
-    .nav-icon.active .hamburger::after {
-        top: 0;
-        transform: rotate(135deg);
-    }
-    /* main */
-    .wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 30px;
-        grid-auto-rows: minmax(100px, auto);
-        padding: 10px 100px;
-        font-size: 2em;
-      }
-    .left {
-        grid-column: 1;
-        letter-spacing: 0.3em;
-    }
-    .middle { 
-        grid-column: 2;
-        width: 300px;
-        padding-top: 60px;
-    }
-    .middle h6 {
-        margin: 0;
-        padding-top: 50px;
-    }
-    .middle p {
-        margin-bottom: 100px;
-    }
-    .right {
-       grid-column: 3;
-       width: 300px;
-    }
-    .ticket {
-        width: auto;
-        height: 10%;
-        background: url(/Users/binbin/Documents/buzzin/img/ticketYellowCopy.png) no-repeat;
-        background-size: auto;
-        margin-top: 100px;
-        transition: 0.3s;
-        }
-    .ticket:hover{
-        transform: scale(1.2);
+header {
+    height: 40vh;
+    background: url(/Users/binbin/Documents/buzzin/img/skybg23.jpg);
+    background-size: cover;
 }
-@media (min-width: 768px) {
+
+footer {
+    height: 50vh;
+    background: url(/Users/binbin/Documents/buzzin/img/ticketCloud2.png)  0 90%;
+    background-size: cover;
+}
+
+/* navigation bar */
+nav {
+    font-family: 'Tajawal', sans-serif;
+    letter-spacing: .2em;
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 1;
+}
+.logo {
+    float: left;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 40px;
+}
+img {
+    width: 55px;
+    height: 55px;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding-top: 1%;
+    padding-bottom:1%;
+    padding-right: 30px;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: rgba(0, 0, 0, 0.664);
+}
+
+nav ul li {
+    display: inline;
+    padding: 0.8em 30px;
+}
+nav ul {
+    max-height: 50%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+/* main */
+h6,
+p {
+    margin: 0;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10px 100px;
+    }
+.left {
+    grid-column: 1;
+    letter-spacing: 0.3em;
+    font-size: 2.5em;
+    padding-top: 25px; 
+    width: 300px;
+    text-align: right;
+}
+.left h6 {
+    line-height: 6.2em;
+}
+.middle { 
+    grid-column: 2;
+    width: 500px;
+    padding-left: 70px;
+    padding-top: 85px;
+    font-size: 1.3em;
+    letter-spacing: 0.04em;
+}
+.middle h6 {
+    line-height: 1.7em;
+}
+.middle p {
+    line-height: 2.3em;
+}
+.info {
+    margin-bottom: 50px;
+}
+.right {
+    grid-column: 3;
+    padding-top: 120px;
     
 }
-@media (min-width: 1224px) {
-   
-}
-@media (min-width: 1824px) {
-
+.ticket {
+    width: 120px;
+    height: 70px;
+    background: url(/Users/binbin/Documents/buzzin/img/ticketYellowCopy.png) no-repeat;
+    background-size: cover;
+    margin-bottom: 95px;
+    transition: 0.3s;
+    }
+.ticket:hover{
+    transform: scale(1.2);
 }

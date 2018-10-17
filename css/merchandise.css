@@ -3,128 +3,211 @@ body {
     padding: 0;
     width: 100%;
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#4D87B2, #f8e8e3);
 }
 
-@media (min-width: 320px) {
-    header {
-        height: 50vh;
-    }
-
-    /* navigation bar */
-    nav {
-        font-family: 'Tajawal', sans-serif;
-        letter-spacing: .2em;
-        position: fixed;
-        width: 100%;
-        line-height: 60px;
-    }
-    .logo {
-        float: left;
-        position: fixed;
-        width: 100px;
-        height: 100px;
-        top: 35px;
-        left: 40px;
-    }
-    img {
-        width: 55px;
-        height: 55px;
-    }
-
-    
-    nav ul {
-        line-height: 60px;
-        list-style: none;
-        background: rgba(0, 0, 0, 0);
-        overflow: hidden;
-        color: #fff;
-        padding-top: 6%;
-        text-align: right;
-        margin: 0;
-        padding-right: 20px;
-        transition: 1s;
-    }
-
-    nav.black ul {
-        background: rgba(0, 0, 0, 0.664);
-    }
-
-    .showing {
-        max-height: 100%;
-    }
-    
-    nav ul li {
-        display: block;
-        padding: 0.8em 50px;
-    }
-    nav ul {
-        padding-top: 12%;
-        max-height: 0;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1em;
-    }
-    
-    .nav-icon {
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        right: 0;
-        display: block;
-    }
-    
-    .hamburger {
-        width: 70px;
-        height: 6px;
-        position: absolute;
-        transition: .5s;
-        top: 70%;
-        right: 50%;
-        display: block;
-    }
-    
-    .hamburger::before,
-    .hamburger::after {
-        content: '';
-        position: absolute;
-        height: 6px;
-        background: #fff;
-        transition: .5s;
-        width: 40px;
-    }
-    
-    .hamburger::before {
-        top: -8px;
-    }
-    
-    .hamburger::after {
-        top: 8px;
-    }
-    
-    .nav-icon.active .hamburger {
-        background: rgba(0, 0, 0, 0);
-    }
-    
-    .nav-icon.active .hamburger::before {
-        top: 0;
-        transform: rotate(45deg);
-    }
-    
-    .nav-icon.active .hamburger::after {
-        top: 0;
-        transform: rotate(135deg);
-    }
+header {
+    height: 40vh;
+    margin-bottom: 50px;
+    background: url(/Users/binbin/Documents/buzzin/img/skybg3.jpg);
+    background-size: cover;
 }
-@media (min-width: 768px) {
-    
+footer {
+    height: 40vh;
+    margin-top: 70px;
+    background: url(/Users/binbin/Documents/buzzin/img/skybg3.jpg) 0 100%;
+    background-size: cover;
 }
-@media (min-width: 1224px) {
-   
-}
-@media (min-width: 1824px) {
 
+/* navigation bar */
+nav {
+    font-family: 'Tajawal', sans-serif;
+    letter-spacing: .2em;
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 1;
 }
+.logo {
+    float: left;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 40px;
+}
+img {
+    width: 55px;
+    height: 55px;
+}
+
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding-top: 1%;
+    padding-bottom:1%;
+    padding-right: 30px;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: rgba(0, 0, 0, 0.664);
+}
+
+nav ul li {
+    display: inline;
+    padding: 0.8em 30px;
+}
+nav ul {
+    max-height: 50%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+/* merchandise */
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+p {
+    font-size: 1.4em;
+    letter-spacing: 0.2em;
+    margin-top: 60%;
+}
+h6 {
+    letter-spacing: 0.1em;
+    margin-top: 110%;
+    margin-left: 34%;
+}
+.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+.two { 
+    grid-column: 2;
+    grid-row: 1;
+    width: 270px;
+    height: 270px;
+    background: url(/Users/binbin/Documents/buzzin/img/beeshirtblackCloud1.png);
+    background-size: cover;
+    transition: 0.3s;
+}
+.two:hover {
+    background: url(/Users/binbin/Documents/buzzin/img/beeshirtblackCloud2.png);
+    background-size: cover;
+    transform: scale(1.1);
+}
+.three {
+    grid-column: 3;
+    grid-row: 1;
+    width: 270px;
+    height: 270px;
+    background: url(/Users/binbin/Documents/buzzin/img/beeshirtredCloud1.png);
+    background-size: cover;
+    transition: 0.3s;
+}
+.three:hover {
+    background: url(/Users/binbin/Documents/buzzin/img/beeshirtredCloud2.png);
+    background-size: cover;
+    transform: scale(1.1);
+}
+.four {
+    grid-column: 4;
+    grid-row: 1;
+    width: 270px;
+    height: 270px;
+    background: url(/Users/binbin/Documents/buzzin/img/beeshirtwhiteCloud1.png);
+    background-size: cover;
+    transition: 0.3s;
+}
+.four:hover {
+    background: url(/Users/binbin/Documents/buzzin/img/beeshirtwhiteCloud2.png);
+    background-size: cover;
+    transform: scale(1.1);
+}
+.twoOne {
+    grid-column: 1;
+    grid-row: 2;
+}
+.twoTwo { 
+    grid-column: 2;
+    grid-row: 2;
+}
+.twoThree {
+    grid-column: 3;
+    grid-row: 2;
+    width: 270px;
+    height: 270px;
+    background: url(/Users/binbin/Documents/buzzin/img/blackhoodieCloud1.png);
+    background-size: cover;
+    transition: 0.3s;
+}
+.twoThree:hover {
+    background: url(/Users/binbin/Documents/buzzin/img/blackhoodieCloud2.png);
+    background-size: cover;
+    transform: scale(1.1);
+}
+.twoFour {
+    grid-column: 4;
+    grid-row: 2;
+}.threeOne {
+    grid-column: 1;
+    grid-row: 3;
+}
+.threeTwo { 
+    grid-column: 2;
+    grid-row: 3;
+    width: 270px;
+    height: 270px;
+    background: url(/Users/binbin/Documents/buzzin/img/buzzinshirtblackCloud1.png);
+    background-size: cover;
+    transition: 0.3s;
+}
+.threeTwo:hover {
+    background: url(/Users/binbin/Documents/buzzin/img/buzzinshirtblackCloud2.png);
+    background-size: cover;
+    transform: scale(1.1);
+}
+.threeThree {
+    grid-column: 3;
+    grid-row: 3;
+    width: 270px;
+    height: 270px;
+    background: url(/Users/binbin/Documents/buzzin/img/buzzinshirtyellowCloud1.png);
+    background-size: cover;
+    transition: 0.3s;
+}
+.threeThree:hover {
+    background: url(/Users/binbin/Documents/buzzin/img/buzzinshirtyellowCloud2.png);
+    background-size: cover;
+    transform: scale(1.1);
+}
+.threeFour {
+    grid-column: 4;
+    grid-row: 3;
+    width: 270px;
+    height: 270px;
+    background: url(/Users/binbin/Documents/buzzin/img/buzzinshirtwhiteCloud1.png);
+    background-size: cover;
+    transition: 0.3s;
+}
+.threeFour:hover {
+    background: url(/Users/binbin/Documents/buzzin/img/buzzinshirtwhiteCloud2.png);
+    background-size: cover;
+    transform: scale(1.1);
+}
+  

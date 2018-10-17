@@ -1,11 +1,3 @@
-// Menu-toggle button
-
-$(document).ready(function() {
-    $(".nav-icon").click(function() {
-          $(".nav-icon").toggleClass('active');
-          $("nav ul").toggleClass('showing');
-    })
-})
 
 // Scrolling Effect
 

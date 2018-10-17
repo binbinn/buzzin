@@ -5,153 +5,93 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 320px) {
-    header {
-        /* height: 50vh; */
-    }
-
-    /* navigation bar */
-    nav {
-        font-family: 'Tajawal', sans-serif;
-        letter-spacing: .2em;
-        position: fixed;
-        width: 100%;
-        line-height: 60px;
-    }
-    .logo {
-        float: left;
-        position: fixed;
-        width: 100px;
-        height: 100px;
-        top: 35px;
-        left: 40px;
-    }
-    img {
-        width: 55px;
-        height: 55px;
-    }
-
-    
-    nav ul {
-        line-height: 60px;
-        list-style: none;
-        background: rgba(0, 0, 0, 0);
-        overflow: hidden;
-        color: #fff;
-        padding-top: 6%;
-        text-align: right;
-        margin: 0;
-        padding-right: 20px;
-        transition: 1s;
-    }
-
-    nav.black ul {
-        background: rgba(0, 0, 0, 0.664);
-    }
-
-    .showing {
-        max-height: 100%;
-    }
-    
-    nav ul li {
-        display: block;
-        padding: 0.8em 50px;
-    }
-    nav ul {
-        padding-top: 12%;
-        max-height: 0;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1em;
-    }
-    
-    .nav-icon {
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        right: 0;
-        display: block;
-    }
-    
-    .hamburger {
-        width: 70px;
-        height: 6px;
-        position: absolute;
-        transition: .5s;
-        top: 70%;
-        right: 50%;
-        display: block;
-    }
-    
-    .hamburger::before,
-    .hamburger::after {
-        content: '';
-        position: absolute;
-        height: 6px;
-        background: #fff;
-        transition: .5s;
-        width: 40px;
-    }
-    
-    .hamburger::before {
-        top: -8px;
-    }
-    
-    .hamburger::after {
-        top: 8px;
-    }
-    
-    .nav-icon.active .hamburger {
-        background: rgba(0, 0, 0, 0);
-    }
-    
-    .nav-icon.active .hamburger::before {
-        top: 0;
-        transform: rotate(45deg);
-    }
-    
-    .nav-icon.active .hamburger::after {
-        top: 0;
-        transform: rotate(135deg);
-    }
-
-    /* black&white picture */
-
-    .bw {
-        width: 100%;
-        height: auto;
-        margin-top: 300px;
-    }
-
-    p {
-        padding: 100px;
-    }
+header {
+    height: 40vh;
+    background: #EDEFEE;
 }
-@media (min-width: 768px) {
-    
+header img.light {
+    width: 300px;
+    height: auto;
+    margin-left: 570px;
 }
-@media (min-width: 1224px) {
-
-    /* black&white picture */
-
-    .bw {
-        width: 500px;
-        height: auto;
-        margin-top: 200px;
-        margin-left: 100px;
-        float: left;
-    }
-
-    p {
-        width: 600px;
-        margin-top: 90px;
-        float: right;
-    }
+section {
+    background: url(/Users/binbin/Documents/buzzin/img/skybg18.jpeg) no-repeat;
+    background-size: cover;
 }
-@media (min-width: 1824px) {
+/* navigation bar */
+nav {
+    font-family: 'Tajawal', sans-serif;
+    letter-spacing: .2em;
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+    z-index: 1;
+}
+.logo {
+    float: left;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 20px;
+    left: 40px;
+}
+img {
+    width: 55px;
+    height: 55px;
+}
 
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding-top: 1%;
+    padding-bottom:1%;
+    padding-right: 30px;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: rgba(0, 0, 0, 0.664);
+}
+
+nav ul li {
+    display: inline;
+    padding: 0.8em 30px;
+}
+nav ul {
+    max-height: 50%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+/* gallery and info*/
+div.gallery {
+    width: 600px;
+    height: 398px;
+    margin-left: 415px;
+    /* border: 2px solid #000; */
+    overflow: scroll;
+    box-shadow: 2px 2px 60px #000;
+}
+div.gallery img,
+div.gallery video {
+    width: 600px;
+    height: auto;
+}
+
+p {
+    width: 860px;
+    padding: 100px;
+    margin-left: 190px;
+    letter-spacing: 0.08em;
+    line-height: 2em;
 }

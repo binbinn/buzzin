@@ -1,11 +1,4 @@
-// Menu-toggle button
 
-$(document).ready(function() {
-    $(".nav-icon").click(function() {
-          $(".nav-icon").toggleClass('active');
-          $("nav ul").toggleClass('showing');
-    })
-})
 
 // Scrolling Effect
 
@@ -20,66 +13,130 @@ $(window).on("scroll", function() {
 })
 
 //music
+var audio1 = new Audio('/Users/binbin/Documents/buzzin/songs/HoodViolation.mp3');
+var audio2 = new Audio('/Users/binbin/Documents/buzzin/songs/Know.mp3');
+var audio3 = new Audio('/Users/binbin/Documents/buzzin/songs/JohnQ.mp3');
+var audio4 = new Audio('/Users/binbin/Documents/buzzin/songs/TooHard.mp3');
+var audio5 = new Audio('/Users/binbin/Documents/buzzin/songs/BustDown.mp3');
+var audio6 = new Audio('/Users/binbin/Documents/buzzin/songs/BirthdayCover.mp3');
 
-//I:songs
-//O:play songs, change icon, bar&time as current value
+// HoodViolation
+$(function() {
+    $('#play1').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_play.png)');
+        audio1.play();
+        spin();
+    });
+    $('#pause1').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_pause.png)');
+        audio1.pause();
+        $('#record').stop();
+    });
+    
+})
+audio1.addEventListener('timeupdate',function(){ 
+    var position = audio1.currentTime / audio1.duration;
+    fill.style.width = position * 100 +'%';
+});
 
-//list all the songs
-// var songArr = ['/Users/binbin/Documents/buzzin/songs/BirthdayCover.mp3', '/Users/binbin/Documents/buzzin/songs/BustDown.mp3', '/Users/binbin/Documents/buzzin/songs/HoodViolation.mp3', '/Users/binbin/Documents/buzzin/songs/JohnQ.mp3', '/Users/binbin/Documents/buzzin/songs/Know.mp3', '/Users/binbin/Documents/buzzin/songs/TooHard.mp3'];
+//Know
+$(function() {
+    $('#play2').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_play.png)');
+        audio2.play();
+        spin();
+    });
+    $('#pause2').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_pause.png)');
+        audio2.pause();
+        $('#record').stop();
+    });
+})
+audio2.addEventListener('timeupdate',function(){ 
+    var position = audio2.currentTime / audio2.duration;
+    fill.style.width = position * 100 +'%';
+});
 
-// var songTitle = document.getElementById("songTitle");
-// var fillBar = document.getElementById("fill");
+// JohnQ
+$(function() {
+    $('#play3').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_play.png)');
+        audio3.play();
+        spin();
+    });
+    $('#pause3').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_pause.png)');
+        audio3.pause();
+        $('#record').stop();
+    });
+})
+audio3.addEventListener('timeupdate',function(){ 
+    var position = audio3.currentTime / audio3.duration;
+    fill.style.width = position * 100 +'%';
+});
 
-// var song = new Audio();
-// var currentSong = 0;
+// TooHard
+$(function() {
+    $('#play4').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_play.png)');
+        audio4.play();
+        spin();
+    });
+    $('#pause4').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_pause.png)');
+        audio4.pause();
+        $('#record').stop();
+    });
+})
+audio4.addEventListener('timeupdate',function(){ 
+    var position = audio4.currentTime / audio4.duration;
+    fill.style.width = position * 100 +'%';
+});
 
-// window.onload = playSong;
+// BustDown
+$(function() {
+    $('#play5').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_play.png)');
+        audio5.play();
+        spin();
+    });
+    $('#pause5').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_pause.png)');
+        audio5.pause();
+        $('#record').stop();
+    });
+})
+audio5.addEventListener('timeupdate',function(){ 
+    var position = audio5.currentTime / audio5.duration;
+    fill.style.width = position * 100 +'%';
+});
 
+// BirthdayCover
+$(function() {
+    $('#play6').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_play.png)');
+        audio6.play();
+        spin();
+    });
+    $('#pause6').click(function() {
+        $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_pause.png)');
+        audio6.pause();
+        $('#record').stop();
+    });
+})
+audio6.addEventListener('timeupdate',function(){ 
+    var position = audio6.currentTime / audio6.duration;
+    fill.style.width = position * 100 +'%';
+});
 
-//user press the play button
-    //play the first song
-    //change icon to pause
-    // $(function() {
-    //     $('#play').click(function() {
-    //       $(this).css('background-image', 'url(/Users/binbin/Documents/buzzin/img/icons_pause.png)');
-    //     });
-    //   })
-    //song title on Demo
-    //moving bar
-    //change current time
-
-//user press the pause button
-    //pause the song
-    //change icon to play
-
-//user press the song title
-    //play the song
-    //change icon to pause
-    //song title on Demo
-    //moving bar
-    //change current time
-
+function spin() {
+    $('#record').animate(
+        {deg: 10800 },
+        {duration: 60000,
+        step: function(now) {
+        $(this).css({ transform: 'rotate(' + now + 'deg)' });
+        }}
+    );
+}
 
     
-    
-    // function playOrPauseSong() {
-    //     if(song.paused) {
-    //         song.play();
-    //         $("#play img").attr("src","/Users/binbin/Documents/buzzin/img/icons_pause.png");
-    //     }
-    //     else{
-    //         song.pause();
-    //         $("#play img").attr("src","/Users/binbin/Documents/buzzin/img/icons_play.png");
-    //     }
-    // }
-    
-    // var song = new Audio();
-    // var currentSong = 0;
-    
-    // funtion playSong() {
-        //     song.src = songs[currentSong];
-        //     songTitle.textContent = songs[currentSong];
-        //     song.play();
-        // }
-        
-    // song.addEventListener()
